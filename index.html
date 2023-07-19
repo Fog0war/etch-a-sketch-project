@@ -17,8 +17,11 @@
         let n = 16;
         nGBtn.addEventListener("click", () => {
           n = prompt("How many squares per side?", );
-          if(n > 100) {
-            alert("ERROR! Maximum number is 100!");
+          if(n%1 !== 0 || n < 1 || n > 100 || isNaN(n) == "true") {
+            alert("ERROR! Number must be an integer between 1 and 100!");
+          } else {
+            gridContainer.innerHTML = " ";
+            createGrid();
           };
         });
 
@@ -26,11 +29,13 @@
             gridContainer.style.setProperty ("--gridRows", n);
         for (let i = 0; i < (n * n); i++) {
             const gridSquare = document.createElement("div");
-            gridSquare.innerText = "Text";
+            gridSquare.innerText = i + parseFloat(n); //"Wretched are the meek, for they are ever forsaken." 
             gridContainer.appendChild(gridSquare).className = "gridSquare";
         };
     };
-        createGrid();
+
+    createGrid();
+
         </script>
 </body>
 </html>
