@@ -1,0 +1,20 @@
+:root {
+    --gridRows: 1;
+} 
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(var(--gridRows), auto);
+    width: (var(--gridRows) * 30);
+    height: (var(--gridRows) * 30);
+    padding: 40px 270px;
+}
+
+.gridSquare {
+    padding: 10px;
+    border: 1px solid rgb(80, 159, 68);
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+}
