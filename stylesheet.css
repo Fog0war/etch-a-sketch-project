@@ -4,16 +4,19 @@
 
 #gridContainer {
     display: grid;
-    grid-template-columns: repeat(var(--gridRows), min-content); 
-   /* grid-template-rows: repeat(var(--gridRows), auto); */
-    padding: 40px auto;
+    grid-template-columns: repeat(var(--gridRows), auto); 
+    padding: 40px auto; 
+    height: 700px;
+    width: 700px; 
 }
 
 .gridSquare {
-    padding: 10px;
+    padding: 0px;
     border: 1px solid rgb(80, 159, 68);
     text-align: center;
-    width: 16px;
-    height: 16px;
     margin: 0px;
+}
+
+#nGbtn {
+    font-size: larger;
 }

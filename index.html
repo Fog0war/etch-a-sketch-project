@@ -29,13 +29,20 @@
             gridContainer.style.setProperty ("--gridRows", n);
         for (let i = 0; i < (n * n); i++) {
             const gridSquare = document.createElement("div");
-            gridSquare.innerText = i + parseFloat(n); //"Wretched are the meek, for they are ever forsaken." 
+        //    gridSquare.innerText = i + parseFloat(n); 
+            gridSquare.addEventListener("mouseover", function(){
+                gridSquare.style.backgroundColor = "green";
+            });
             gridContainer.appendChild(gridSquare).className = "gridSquare";
         };
-    };
+       
+        
+        }; 
 
     createGrid();
 
+    
+       
         </script>
 </body>
 </html>
